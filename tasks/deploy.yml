@@ -1,0 +1,13 @@
+- assert:
+    that:
+     - "version is defined"
+     - "networks is defined"
+     - "volumes is defined"
+     - "services is defined"
+
+- name: Generate
+  template: src="docker-compose.yml.j2" dest="{{ project_docker_compose_file }}"
+
+- docker_service:
+    project_name: "{{ project_docker.project_name }}"
+    definition: "{{ project_docker.definition }}"

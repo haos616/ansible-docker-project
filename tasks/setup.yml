@@ -1,0 +1,6 @@
+- name: Add user {{ project_user }}
+  user: name="{{ project_user }}" shell=/bin/bash
+
+- name: Creates directories
+  file: path="{{ item }}" owner="{{ project_user }}" group="{{ project_user }}" state=directory
+  with_items: "{{ project_dirs }}"

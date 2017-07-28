@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: Haos616
+  description: Role to use Docker compose config
+  license: MIT
+  min_ansible_version: 2.3
+  platforms:
+  - name: Debian
+    versions:
+    - wheezy
+  - name: Ubuntu
+    versions:
+    - xenial
+  categories:
+  - docker
+  - docker-compose
